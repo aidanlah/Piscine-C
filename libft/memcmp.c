@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aileong <aileong@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/28 22:34:48 by aileong           #+#    #+#             */
+/*   Updated: 2024/02/28 22:34:50 by aileong          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
 	unsigned char	*c1;
@@ -12,7 +24,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (*(c1 + i) != '\0' && *(c1 + i) == *(c2 + i) && n > 0)
-			return (*(c1 + i) - *(c2 + i))
+			return (*(c1 + i) - *(c2 + i));
 		i ++;
 	}
 	return (0);
