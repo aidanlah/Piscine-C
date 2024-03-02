@@ -21,7 +21,18 @@ FILES = isalpha.c \
 		strnstr.c \
 		atoi.c \
 		calloc.c \
-		strdup.c
+		strdup.c \
+		substr.c \
+		strjoin.c \
+		strtrim.c \
+		split.c \
+		itoa.c \
+		strmapi.c \
+		stritri.c \
+		putchar_fd.c \
+		putstr_fd.c \
+		putendl_fd.c \
+		putnbr_fd.c
 
 OBJS = $(FILES:.c=.o)
 
