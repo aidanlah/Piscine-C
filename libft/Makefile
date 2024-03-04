@@ -28,7 +28,7 @@ FILES = isalpha.c \
 		split.c \
 		itoa.c \
 		strmapi.c \
-		stritri.c \
+		striteri.c \
 		putchar_fd.c \
 		putstr_fd.c \
 		putendl_fd.c \

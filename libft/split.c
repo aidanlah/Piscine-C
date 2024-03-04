@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static	void	free_up(char *str)
+static	void	free_up(char **str)
 {
 	int	i;
 
@@ -13,7 +13,7 @@ static	void	free_up(char *str)
 	free(str);
 }
 
-static	int	word_count(char *str, char *c)
+static	int	word_count(const char *str, char c)
 {
 	int	i;
 	int	count;
@@ -29,7 +29,7 @@ static	int	word_count(char *str, char *c)
 	return (count);
 }
 
-static	void	ft_cpy(char	*dst, char *src, char c)
+static	void	ft_cpy(char	*dst, const char *src, char c)
 {
 	int	i;
 
@@ -42,7 +42,7 @@ static	void	ft_cpy(char	*dst, char *src, char c)
 	dst[i] = '\0';
 }
 
-static	void	split_words(char **arr, char *str, char c)
+static	void	split_words(char **arr, const char *str, char c)
 {
 	int	i;
 	int	wc;
