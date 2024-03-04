@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   itoa.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aileong <aileong@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/04 22:25:49 by aileong           #+#    #+#             */
+/*   Updated: 2024/03/04 22:25:50 by aileong          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	size_t	count_int_len(int n)
@@ -25,7 +37,7 @@ char	*ft_itoa(int n)
 	size_t			len;
 	char			*arg;
 	unsigned int	num;
-	
+
 	len = count_int_len(n);
 	arg = (char *) malloc(sizeof(char) * (len + 1));
 	if (!arg)

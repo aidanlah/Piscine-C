@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   split.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aileong <aileong@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/04 22:25:40 by aileong           #+#    #+#             */
+/*   Updated: 2024/03/04 22:25:41 by aileong          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	void	free_up(char **str)
@@ -61,10 +73,7 @@ static	void	split_words(char **arr, const char *str, char c)
 				word_len ++;
 			arr[wc] = (char *) malloc(sizeof(char) * (word_len + 1));
 			if (!arr[wc])
-			{
-				free_up(arr);
-				return ;
-			}
+				return (free_up(arr));
 			ft_cpy(arr[wc], str + i, c);
 			i += word_len;
 			wc ++;

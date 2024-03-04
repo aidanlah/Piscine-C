@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   putnbr_fd.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aileong <aileong@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/04 22:26:30 by aileong           #+#    #+#             */
+/*   Updated: 2024/03/04 22:26:31 by aileong          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
@@ -15,5 +27,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd((n % 10 + '0'), fd);
 	}
 	else
-		ft_putchar_fd(n +'0', fd);
+		ft_putchar_fd(n + '0', fd);
 }
