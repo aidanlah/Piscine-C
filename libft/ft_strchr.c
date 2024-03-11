@@ -15,7 +15,7 @@
 // type casted becuase return type is pointer to a char
 char	*ft_strchr(const char *s, int c)
 {
-	while (s)
+	while (*s)
 	{
 		if (*s == c)
 			return ((char *)s);

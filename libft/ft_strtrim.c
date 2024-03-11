@@ -14,23 +14,21 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
 	size_t	i;
-	size_t	j;
 
-	str = NULL;
-	if (*s1 && *set)
-	{
-		i = 0;
-		j = ft_strlen(s1);
-		while (s1[i] && ft_strchr(set, s1[i]))
-			i ++;
-		while (j > 1 && s1[j - 1] && ft_strchr(set, s1[j -1]))
-			j --;
-		str = malloc(j - i + 1);
-		if (!str)
-			return (NULL);
-		ft_strlcpy(str, &s1[i], j - i + 1);
-	}
-	return (str);
+	if (!s1 || !set)
+		return (0);
+	while (*s1 && ft_strchr(set, *s1))
+		s1 ++;
+	i = ft_strlen(s1);
+	while (i && ft_strchr(set, s1[i]))
+		i --;
+	return (ft_substr(s1, 0, i + 1));
 }
+
+// #include <stdio.h>
+// int main(){
+// 	char s1[] = "aaa dnwiuabfenua aaa";
+// 	char set[] = "a ";
+// 	printf("%s\n", ft_strtrim(s1, set));
+// }
